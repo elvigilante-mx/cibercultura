@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cibercultura para mi Comunidad · Portafolio de Delitos Cibernéticos</title>
+<meta name="description" content="Portafolio digital de evidencias en delitos cibernéticos: casos reales, laboratorio, videos de prevención y recomendaciones para familias y empresas en México.">
+<meta property="og:title" content="Cibercultura para mi Comunidad">
+<meta property="og:description" content="Aprende a reconocer y prevenir delitos cibernéticos con casos reales y videos explicados en lenguaje sencillo.">
+<meta property="og:image" content="img/grooming-portada.webp">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230F1A2E'/><path d='M32 12l16 6v12c0 11-7 18-16 22-9-4-16-11-16-22V18z' fill='%23FFC145'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0F1A2E; --navy2:#17243F; --ink:#1B2335; --soft:#4A556E; --cream:#FFF8EC; --paper:#FFFFFF;
+  --line:#E7DDC9; --amber:#FFC145; --teal:#0B7A72; --teal-l:#5FD4C8; --coral:#E4572E; --coral-l:#FF8A65;
+  --radius:20px; --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Nunito Sans',Arial,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6;font-size:17px}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--teal)}
+h1,h2,h3{font-family:'Sora','Trebuchet MS',sans-serif;line-height:1.2;color:var(--navy)}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:12px}
+h3{font-size:21px;margin-bottom:8px}
+p{margin-bottom:12px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--amber);padding:8px 12px;z-index:99;border-radius:8px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:6px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(15,26,46,.96);backdrop-filter:blur(8px);color:#fff}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:'Sora',sans-serif;font-weight:700;font-size:18px}
+.brand svg{width:30px;height:30px}
+nav ul{display:flex;gap:4px;list-style:none}
+nav a{color:#D6DDEE;text-decoration:none;font-weight:600;font-size:15px;padding:8px 12px;border-radius:999px}
+nav a:hover{background:rgba(255,255,255,.1);color:#fff}
+.menu-btn{display:none;background:none;border:2px solid rgba(255,255,255,.3);color:#fff;border-radius:10px;padding:6px 12px;font:600 15px 'Nunito Sans',sans-serif;cursor:pointer}
+@media (max-width:900px){
+  .menu-btn{display:block}
+  nav{position:absolute;top:64px;left:0;right:0;background:var(--navy);display:none;padding:8px 20px 20px}
+  nav.open{display:block}
+  nav ul{flex-direction:column}
+  nav a{display:block;padding:12px;font-size:17px}
+}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;padding:72px 0 88px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.eyebrow{display:inline-block;font-weight:700;letter-spacing:2px;text-transform:uppercase;font-size:13px;color:var(--amber);margin-bottom:14px}
+.hero h1{color:#fff;font-size:clamp(36px,6vw,62px);margin-bottom:14px}
+.hero h1 span{color:var(--amber)}
+.hero .lead{font-size:20px;color:#D6DDEE;max-width:600px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);padding:8px 14px;border-radius:999px;font-weight:700;font-size:15px}
+.btn{display:inline-block;background:var(--amber);color:var(--navy);font-weight:800;text-decoration:none;padding:14px 24px;border-radius:999px;font-size:17px}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);margin-left:8px}
+.hero-art{position:relative}
+.hero-art img{border-radius:var(--radius);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.hero-art .tag{position:absolute;left:-14px;bottom:-14px;background:var(--amber);color:var(--navy);font-weight:800;padding:10px 16px;border-radius:14px;font-size:15px}
+@media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero{padding:48px 0 64px}.btn.ghost{margin:12px 0 0}}
+
+/* sections */
+section{padding:72px 0}
+section.alt{background:var(--paper)}
+section.dark{background:var(--navy);color:#E6EAF2}
+section.dark h2,section.dark h3{color:#fff}
+.intro{max-width:760px;color:var(--soft);font-size:18px;margin-bottom:28px}
+section.dark .intro{color:#C9D2E6}
+.act-head{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.num{flex:none;width:56px;height:56px;border-radius:16px;display:grid;place-items:center;font:700 24px 'Sora',sans-serif;background:var(--amber);color:var(--navy)}
+.kicker{font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:1.5px;font-size:13px}
+section.dark .kicker{color:var(--teal-l)}
+
+/* activity cards grid */
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.act-card{background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);padding:22px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:8px;transition:transform .15s,border-color .15s}
+.act-card:hover{transform:translateY(-3px);border-color:var(--amber)}
+.act-card .num{width:44px;height:44px;font-size:19px;border-radius:12px}
+.act-card p{color:var(--soft);font-size:15px;margin:0}
+.act-card .type{font-size:13px;font-weight:800;color:var(--teal);text-transform:uppercase;letter-spacing:1px}
+@media (max-width:900px){.acts{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.acts{grid-template-columns:1fr}}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+@media (max-width:820px){.cols{grid-template-columns:1fr}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0}
+.stat{background:var(--cream);border-radius:16px;padding:16px}
+section.alt .stat{background:var(--cream)} section:not(.alt):not(.dark) .stat{background:var(--paper)}
+section.dark .stat{background:var(--navy2)}
+.stat b{display:block;font:700 30px 'Sora',sans-serif;color:var(--coral)}
+section.dark .stat b{color:var(--amber)}
+.stat span{font-size:15px;color:var(--soft)} section.dark .stat span{color:#C9D2E6}
+@media (max-width:560px){.stats{grid-template-columns:1fr}}
+
+.card{background:var(--paper);border:2px solid var(--line);border-radius:var(--radius);padding:22px}
+section.alt .card{background:var(--cream)}
+section.dark .card{background:var(--navy2);border-color:#2A3A5E}
+ul.clean{list-style:none;display:grid;gap:10px}
+ul.clean li{padding-left:30px;position:relative}
+ul.clean li::before{content:"";position:absolute;left:4px;top:8px;width:14px;height:14px;border-radius:4px;background:var(--amber)}
+.lesson{border-left:6px solid var(--amber);background:var(--paper);padding:16px 20px;border-radius:0 16px 16px 0;margin:20px 0;font-size:18px}
+section.alt .lesson{background:var(--cream)}
+section.dark .lesson{background:var(--navy2)}
+
+.downloads{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.dl{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;padding:12px 18px;border-radius:12px;font-size:15px}
+.dl.light{background:var(--paper);color:var(--navy);border:2px solid var(--line)}
+section.dark .dl{background:var(--amber);color:var(--navy)}
+.dl svg{width:18px;height:18px}
+
+figure{margin:0}
+figure img{border-radius:14px;border:1px solid var(--line);background:#0b0f18;width:100%}
+figcaption{font-size:14px;color:var(--soft);margin-top:8px}
+section.dark figcaption{color:#AEB9D4}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+.gallery.two{grid-template-columns:1fr 1fr}
+.gallery button{all:unset;cursor:zoom-in;display:block}
+.gallery img{aspect-ratio:16/10;object-fit:contain;background:#0b0f18}
+@media (max-width:820px){.gallery{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.gallery,.gallery.two{grid-template-columns:1fr}}
+
+.video{position:relative;aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;background:#000;box-shadow:0 14px 40px rgba(15,26,46,.25)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.video-link{font-size:15px;margin-top:10px}
+
+table{width:100%;border-collapse:collapse;font-size:16px;background:var(--paper);border-radius:14px;overflow:hidden}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--navy);color:#fff;font-weight:700}
+.tbl{overflow-x:auto;border-radius:14px;border:1px solid var(--line);margin:18px 0}
+
+.lockrow{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.lock{background:var(--paper);border:2px solid var(--line);border-radius:18px;padding:18px}
+.lock .ico{font-size:30px;line-height:1;margin-bottom:8px}
+.lock h3{font-size:18px}
+.lock p{font-size:15px;color:var(--soft);margin:0}
+@media (max-width:900px){.lockrow{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.lockrow{grid-template-columns:1fr}}
+
+.tech{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}
+.tech div{background:var(--cream);border-radius:14px;padding:14px}
+.tech b{display:block;font-family:'Sora',sans-serif;color:var(--navy)}
+.tech span{font-size:14px;color:var(--soft)}
+@media (max-width:820px){.tech{grid-template-columns:1fr 1fr}}
+
+.types{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:16px 0}
+.types span{background:var(--navy2);border:1px solid #2A3A5E;border-radius:12px;padding:10px 12px;font-weight:700;font-size:15px}
+
+.powers{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0}
+.power{border-radius:18px;padding:18px;color:var(--navy)}
+.power b{display:block;font:700 26px 'Sora',sans-serif}
+.p1{background:var(--amber)}.p2{background:var(--teal-l)}.p3{background:var(--coral-l)}
+@media (max-width:560px){.powers{grid-template-columns:1fr}}
+
+.help{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.help .card b{display:block;font:700 34px 'Sora',sans-serif;color:var(--coral)}
+@media (max-width:760px){.help{grid-template-columns:1fr}}
+
+.refs li{margin-bottom:10px;padding-left:2em;text-indent:-2em;font-size:15px;list-style:none;overflow-wrap:anywhere}
+
+footer{background:var(--navy);color:#C9D2E6;padding:44px 0;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+footer img{height:56px;width:auto;background:#fff;border-radius:10px;padding:6px 10px}
+footer a{color:var(--amber)}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:min(1200px,94vw)}
+dialog::backdrop{background:rgba(5,10,20,.85)}
+dialog img{border-radius:12px;max-height:84vh;width:auto;margin:auto}
+dialog p{color:#fff;text-align:center;margin-top:10px}
+dialog button{position:fixed;top:14px;right:18px;background:var(--amber);border:0;border-radius:999px;width:44px;height:44px;font-size:24px;cursor:pointer}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 6l22 8v16c0 15-9 25-22 30C19 55 10 45 10 30V14z" fill="#FFC145"/><circle cx="32" cy="30" r="9" fill="#0F1A2E"/><circle cx="32" cy="30" r="4" fill="#FFC145"/></svg>
+      ElVigilante
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav id="menu" aria-label="Secciones">
+      <ul>
+        <li><a href="#actividades">Actividades</a></li>
+        <li><a href="#act2">Laboratorio</a></li>
+        <li><a href="#cripto">Criptografía</a></li>
+        <li><a href="#act6">Videos</a></li>
+        <li><a href="#ayuda">¿Dónde denunciar?</a></li>
+        <li><a href="#referencias">Referencias</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Portafolio Digital de Evidencias en Delitos Cibernéticos</span>
+      <h1>Cibercultura para <span>mi Comunidad</span></h1>
+      <p class="lead">Seis trabajos sobre delitos en internet, explicados en lenguaje sencillo. Aquí vas a encontrar casos reales que pasaron en México, un laboratorio de práctica, videos para ver en familia y consejos que puedes aplicar hoy mismo.</p>
+      <div class="chips" aria-label="Contenido del sitio">
+        <span class="chip">6 actividades</span><span class="chip">3 videos</span><span class="chip">1 laboratorio práctico</span><span class="chip">PDF descargables</span>
+      </div>
+      <a class="btn" href="#actividades">Ver las actividades</a>
+      <a class="btn ghost" href="#ayuda">¿Te pasó algo? Denuncia</a>
+    </div>
+    <div class="hero-art">
+      <img src="img/grooming-portada.webp" alt="Ilustración: una niña con una tableta y detrás una sombra escondida tras una máscara sonriente" width="1200" height="675">
+      <span class="tag">Cuidarnos en internet también se aprende</span>
+    </div>
+  </div>
+</section>
+
+<!-- RESUMEN -->
+<section id="actividades">
+  <div class="wrap">
+    <span class="kicker">Mapa del portafolio</span>
+    <h2>Las 6 actividades</h2>
+    <p class="intro">Cada tarjeta te lleva a una actividad. Todas tienen una explicación corta, la evidencia del trabajo (video, capturas o documento) y lo que aprendimos para protegernos.</p>
+    <div class="acts">
+      <a class="act-card" href="#act1"><span class="num">1</span><span class="type">Informe de caso</span><h3>Ataque al SPEI (2018)</h3><p>Cómo robaron cerca de 300 millones de pesos a bancos mexicanos.</p></a>
+      <a class="act-card" href="#act2"><span class="num">2</span><span class="type">Laboratorio</span><h3>Redes y criptografía</h3><p>Escaneos, ataques de red y cifrado, probados en un entorno controlado.</p></a>
+      <a class="act-card" href="#act3"><span class="num">3</span><span class="type">Video</span><h3>Ransomware en Pemex (2019)</h3><p>El secuestro digital que apagó miles de computadoras.</p></a>
+      <a class="act-card" href="#act4"><span class="num">4</span><span class="type">Encuesta</span><h3>Ingeniería social</h3><p>¿Qué tanto sabemos de los engaños por correo, llamada o mensaje?</p></a>
+      <a class="act-card" href="#act5"><span class="num">5</span><span class="type">Video</span><h3>Usurpación de identidad</h3><p>Los 7 tipos de robo de identidad y cómo protegerte.</p></a>
+      <a class="act-card" href="#act6"><span class="num">6</span><span class="type">Video</span><h3>Grooming: el falso amigo</h3><p>Cómo cuidar a niñas y niños de los depredadores en línea.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ACT 1 -->
+<section class="alt" id="act1">
+  <div class="wrap">
+    <div class="act-head"><span class="num">1</span><div><span class="kicker">Actividad 1 · Informe técnico-forense</span><h2>El ataque al SPEI de 2018</h2></div></div>
+    <p class="intro">El SPEI es el sistema del Banco de México por donde pasan las transferencias entre bancos. En 2018, unos delincuentes no atacaron el corazón del sistema: entraron por las "puertas laterales", los programas que cada banco usa para conectarse.</p>
+    <div class="stats">
+      <div class="stat"><b>5</b><span>ataques documentados por Banxico entre el 17 de abril y el 8 de mayo de 2018</span></div>
+      <div class="stat"><b>≈ $300 M</b><span>de pesos en transferencias no autorizadas</span></div>
+      <div class="stat"><b>$0</b><span>perdidos por los clientes: el fraude fue contra los saldos de los propios bancos</span></div>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>¿Qué pasó, en palabras sencillas?</h3>
+        <p>Imagina un edificio con una bóveda muy segura (el núcleo del SPEI) y varias oficinas conectadas a ella (los bancos). Los ladrones no rompieron la bóveda: se metieron a algunas oficinas, se hicieron pasar por empleados y mandaron órdenes de pago falsas. El dinero salió hacia cuentas de terceros y se retiró rápidamente.</p>
+        <h3>¿Qué leyes aplican?</h3>
+        <p>El Código Penal Federal castiga el acceso sin permiso a sistemas de instituciones financieras (artículos 211 bis 4 y 211 bis 5). Además, Banxico revisó las fallas de los bancos y anunció sanciones.</p>
+        <div class="lesson"><b>Lección:</b> una cadena es tan fuerte como su eslabón más débil. No basta con proteger el centro; cada conexión cuenta.</div>
+      </div>
+      <figure>
+        <button class="zoom" data-src="img/spei-diagrama.webp" data-cap="Fases del ataque al SPEI según el reporte forense de Banxico."><img src="img/spei-diagrama.webp" alt="Diagrama de las seis fases del ataque al SPEI" loading="lazy" width="1400" height="1235"></button>
+        <figcaption>Diagrama de las fases del ataque, elaborado a partir del reporte forense de Banco de México (2018). Clic para ampliar.</figcaption>
+      </figure>
+    </div>
+    <div class="downloads">
+      <a class="dl" href="docs/Act1_Informe_Caso_SPEI_2018.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>Descargar informe completo (PDF, 15 págs.)</a>
+    </div>
+  </div>
+</section>
+
+<!-- ACT 2 -->
+<section id="act2">
+  <div class="wrap">
+    <div class="act-head"><span class="num">2</span><div><span class="kicker">Actividad 2 · Laboratorio práctico</span><h2>Así se ve un ataque de red (en un laboratorio seguro)</h2></div></div>
+    <p class="intro">Armé dos computadoras virtuales dentro de mi propia computadora, aisladas y bajo mi control, para observar en un ambiente seguro cómo se ven los riesgos de una red y cómo nos protege el cifrado. Todo fue con fines educativos: hacer esto contra equipos ajenos sin permiso es delito (art. 211 bis del Código Penal Federal).</p>
+    <div class="cols">
+      <div class="card">
+        <h3>Práctica 1 · Reconocer la red</h3>
+        <p>Vimos qué equipos están conectados y qué "puertas" (servicios) tienen abiertas. Encontramos servicios viejos con fallas conocidas: como una casa con ventanas sin seguro.</p>
+      </div>
+      <div class="card">
+        <h3>Práctica 2 · Riesgos dentro de la red</h3>
+        <p>Observamos cómo un equipo puede hacerse pasar por otro dentro de la misma red local y cómo una avalancha de solicitudes puede saturar un servicio. Por eso importan el monitoreo y la segmentación de redes.</p>
+      </div>
+    </div>
+    <div class="gallery">
+      <button class="zoom" data-src="img/lab-nmap-descubrimiento.webp" data-cap="Práctica 1: equipos encontrados en la red del laboratorio."><figure><img src="img/lab-nmap-descubrimiento.webp" alt="Captura de terminal con los equipos encontrados en la red del laboratorio" loading="lazy"><figcaption>Equipos encontrados en la red</figcaption></figure></button>
+      <button class="zoom" data-src="img/lab-nmap-puertos.webp" data-cap="Práctica 1: servicios abiertos en el equipo de prueba."><figure><img src="img/lab-nmap-puertos.webp" alt="Captura con la lista de servicios abiertos del equipo de prueba" loading="lazy"><figcaption>Servicios abiertos ("puertas")</figcaption></figure></button>
+      <button class="zoom" data-src="img/lab-arp-envenenada.webp" data-cap="Práctica 2: la tabla de direcciones del equipo víctima alterada durante la prueba."><figure><img src="img/lab-arp-envenenada.webp" alt="Captura de la tabla de direcciones alterada durante la prueba" loading="lazy"><figcaption>Suplantación dentro de la red local</figcaption></figure></button>
+    </div>
+    <h3 id="cripto" style="margin-top:36px;font-size:28px">Práctica 3 · Criptografía: los candados de internet</h3>
+    <p class="intro">La criptografía es lo que protege tus contraseñas, tus pagos y tus mensajes. Probamos cuatro herramientas:</p>
+    <div class="lockrow">
+      <div class="lock"><div class="ico" aria-hidden="true">🔎</div><h3>Hash (huella digital)</h3><p>Cambias una sola letra y la "huella" cambia por completo. Sirve para saber si un archivo fue alterado.</p></div>
+      <div class="lock"><div class="ico" aria-hidden="true">🔑</div><h3>AES (una sola llave)</h3><p>Como un candado con una llave para cerrar y abrir. Es muy rápido, pero ambos deben tener la misma llave.</p></div>
+      <div class="lock"><div class="ico" aria-hidden="true">📬</div><h3>RSA (dos llaves)</h3><p>Como un buzón: cualquiera puede meter cartas (llave pública), pero solo el dueño abre (llave privada).</p></div>
+      <div class="lock"><div class="ico" aria-hidden="true">🔒</div><h3>HTTPS (el candado del navegador)</h3><p>Combina las dos anteriores para que nadie lea lo que envías a una página.</p></div>
+    </div>
+    <div class="gallery two">
+      <button class="zoom" data-src="img/lab-http-visible.webp" data-cap="Sin cifrado (HTTP): lo que se envía se puede leer."><figure><img src="img/lab-http-visible.webp" alt="Captura de tráfico HTTP donde el contenido es legible" loading="lazy"><figcaption>HTTP: todo se lee como postal abierta</figcaption></figure></button>
+      <button class="zoom" data-src="img/lab-https-sni.webp" data-cap="Con cifrado (HTTPS): solo se ve el nombre del sitio."><figure><img src="img/lab-https-sni.webp" alt="Captura de tráfico HTTPS donde solo se ve el nombre del sitio" loading="lazy"><figcaption>HTTPS: solo se ve el nombre del sitio</figcaption></figure></button>
+    </div>
+    <div class="tbl"><table>
+      <thead><tr><th>¿Qué se alcanza a ver?</th><th>Sin candado (HTTP)</th><th>Con candado (HTTPS)</th></tr></thead>
+      <tbody>
+        <tr><td>Nombre del sitio</td><td>Sí</td><td>Sí</td></tr>
+        <tr><td>Página exacta que visitas</td><td>Sí</td><td>No</td></tr>
+        <tr><td>Lo que escribes (contraseñas, datos)</td><td>Sí</td><td>No</td></tr>
+        <tr><td>Contenido de la respuesta</td><td>Sí</td><td>No</td></tr>
+      </tbody>
+    </table></div>
+    <div class="card">
+      <h3>Reflexión: criptografía y protección de datos</h3>
+      <p>El laboratorio me dejó una idea clara: el cifrado no es un tema solo de expertos, es lo que separa una conversación privada de una postal que cualquiera puede leer. Cuando un sitio usa HTTP, una persona conectada a la misma red puede ver lo que escribes. Con HTTPS solo alcanza a ver el nombre del sitio. Por eso la regla más útil para cualquier persona es sencilla: no escribas contraseñas ni datos bancarios donde no veas el candado.</p>
+      <p>También aprendí que el cifrado protege la información, pero no protege a la persona del engaño. Si alguien te convence de darle tu contraseña, el candado no sirve. Por eso la criptografía y la educación van juntas: la técnica cierra la puerta, pero cada quien decide a quién se la abre.</p>
+      <p>En México, las empresas que guardan datos personales tienen la obligación de protegerlos. En marzo de 2025 se publicó una nueva Ley Federal de Protección de Datos Personales en Posesión de los Particulares, que exige medidas de seguridad como estas. Cifrar, respaldar y limitar quién accede a la información no es un lujo: es parte de cumplir la ley y de respetar a los clientes.</p>
+    </div>
+    <div class="downloads">
+      <a class="dl" href="docs/Act2_Reporte_Laboratorio_Redes_y_Criptografia.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>Descargar reporte del laboratorio (PDF, 23 págs.)</a>
+    </div>
+  </div>
+</section>
+
+<!-- ACT 3 -->
+<section class="dark" id="act3">
+  <div class="wrap">
+    <div class="act-head"><span class="num">3</span><div><span class="kicker">Actividad 3 · Video White Hat</span><h2>Ransomware en Pemex (2019)</h2></div></div>
+    <p class="intro">El 10 de noviembre de 2019 miles de computadoras de Pemex se apagaron por un ransomware llamado DoppelPaymer: un programa que "secuestra" los archivos y pide dinero para liberarlos.</p>
+    <div class="cols">
+      <div>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/lNTXsuI8KxU" title="Video: Caso Pemex 2019, anatomía de un ransomware" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <p class="video-link">¿No carga? <a href="https://youtu.be/lNTXsuI8KxU" target="_blank" rel="noopener">Ver en YouTube</a></p>
+      </div>
+      <div>
+        <div class="stats" style="grid-template-columns:1fr 1fr">
+          <div class="stat"><b>565 BTC</b><span>de rescate exigido (≈ 4.9 millones de dólares)</span></div>
+          <div class="stat"><b>&lt; 5 %</b><span>de los equipos afectados, según la cifra oficial de Pemex</span></div>
+        </div>
+        <ul class="clean">
+          <li>Pemex no pagó el rescate.</li>
+          <li>El ransomware se "renta" como franquicia (Ransomware como Servicio).</li>
+          <li>Defensas clave: respaldos fuera de línea, actualizaciones y verificación en dos pasos.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lesson"><b>Lección:</b> la ciberseguridad es cultura, no solo tecnología. Un clic en un correo falso puede detener a toda una empresa.</div>
+  </div>
+</section>
+
+<!-- ACT 4 -->
+<section class="alt" id="act4">
+  <div class="wrap">
+    <div class="act-head"><span class="num">4</span><div><span class="kicker">Actividad 4 · Encuesta de diagnóstico</span><h2>¿Qué tanto sabemos de ingeniería social?</h2></div></div>
+    <p class="intro">La ingeniería social es engañar a una persona para que entregue información o dinero. No ataca a la computadora: ataca la confianza. Diseñé una encuesta anónima de 20 preguntas para medir qué tanto reconocemos estos engaños en la familia y en el trabajo.</p>
+    <div class="tech">
+      <div><b>Phishing</b><span>Correo falso que parece de tu banco.</span></div>
+      <div><b>Spear phishing</b><span>Correo falso hecho a tu medida.</span></div>
+      <div><b>Whaling</b><span>Engaño dirigido a jefes y directivos.</span></div>
+      <div><b>Smishing</b><span>SMS falso: "tu paquete no llegó".</span></div>
+      <div><b>Vishing</b><span>Llamada falsa de "soporte" o del banco.</span></div>
+      <div><b>Pretexting</b><span>Una historia inventada para pedirte datos.</span></div>
+      <div><b>Tailgating</b><span>Alguien entra detrás de ti a un lugar restringido.</span></div>
+      <div><b>Quishing</b><span>Código QR que te lleva a una página falsa.</span></div>
+    </div>
+    <div class="cols">
+      <div class="card">
+        <h3>Cómo se diseñó</h3>
+        <ul class="clean">
+          <li>Cinco bloques: perfil, conocimiento general, 8 escenarios reales, experiencia y percepción de riesgo.</li>
+          <li>Anónima: no pide nombre ni correo.</li>
+          <li>Cada técnica se pregunta como una situación de la vida diaria, no como definición.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Contesta la encuesta</h3>
+        <p>Tarda de 5 a 7 minutos y al final te deja un consejo útil.</p>
+        <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfoshQlbPBUK44iCvzvUviEWpYX9YLxMRT8-3LQtrAzOGiHTA/viewform" target="_blank" rel="noopener">Abrir encuesta</a>
+      </div>
+    </div>
+    <!-- RESULTADOS: aquí van las gráficas cuando se tengan las respuestas -->
+    <div class="lesson"><b>Consejo inmediato:</b> activa la verificación en dos pasos en tu correo, WhatsApp y banca. Si alguien te pide algo urgente, confirma por otro medio antes de actuar.</div>
+    <div class="downloads">
+      <a class="dl" href="docs/Act4_Diagnostico_Ingenieria_Social.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>Descargar diseño de la encuesta (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<!-- ACT 5 -->
+<section class="dark" id="act5">
+  <div class="wrap">
+    <div class="act-head"><span class="num">5</span><div><span class="kicker">Actividad 5 · Video informativo</span><h2>Usurpación de identidad</h2></div></div>
+    <p class="intro">Alguien usa tus datos (nombre, CURP, INE, cuentas o tu cara) para hacerse pasar por ti y obtener dinero, créditos o acceso. Le puede pasar a cualquier persona.</p>
+    <div class="cols">
+      <div>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/SxAkz_GEdHk" title="Video: Usurpación de identidad, cómo reconocerla y protegerte" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <p class="video-link">¿No carga? <a href="https://youtu.be/SxAkz_GEdHk" target="_blank" rel="noopener" style="color:var(--amber)">Ver en YouTube</a></p>
+      </div>
+      <div>
+        <h3>Los 7 tipos que explica el video</h3>
+        <div class="types"><span>Personal</span><span>Financiera</span><span>Digital</span><span>Acceso ilícito a sistemas</span><span>Corporativa</span><span>Documental</span><span>Biométrica</span></div>
+        <h3>Cómo protegerte</h3>
+        <ul class="clean">
+          <li>Verificación en dos pasos en todas tus cuentas.</li>
+          <li>Contraseñas largas y distintas para cada sitio.</li>
+          <li>Revisa bien los enlaces antes de dar clic.</li>
+          <li>Evita hacer pagos en redes wifi públicas.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="downloads">
+      <a class="dl" href="docs/Act5_Video_Usurpacion_de_Identidad.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>Descargar ficha de entrega (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<!-- ACT 6 -->
+<section id="act6">
+  <div class="wrap">
+    <div class="act-head"><span class="num">6</span><div><span class="kicker">Actividad 6 · Video para familias</span><h2>Grooming: el falso amigo</h2></div></div>
+    <p class="intro">El grooming es cuando un adulto se gana la confianza de una niña, niño o adolescente por internet con fines de abuso sexual. No entra a la fuerza: se hace pasar por amigo. Este video está hecho para verlo en familia.</p>
+    <div class="cols">
+      <div>
+        <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/fNthURPszww" title="Video: Grooming, el falso amigo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <p class="video-link">¿No carga? <a href="https://youtu.be/fNthURPszww" target="_blank" rel="noopener">Ver en YouTube</a></p>
+      </div>
+      <div>
+        <h3>Para niñas y niños: 3 superpoderes</h3>
+        <div class="powers">
+          <div class="power p1"><b>PARA</b>No contestes ni mandes nada.</div>
+          <div class="power p2"><b>GUARDA</b>No borres. Toma captura.</div>
+          <div class="power p3"><b>CUENTA</b>Dile a un adulto de confianza.</div>
+        </div>
+        <p><b>Nunca es tu culpa.</b> Un amigo de verdad no te pide guardar secretos de tus papás.</p>
+      </div>
+    </div>
+    <div class="gallery">
+      <button class="zoom" data-src="img/grooming-mascaras.webp" data-cap="Las identidades falsas que usa el agresor."><figure><img src="img/grooming-mascaras.webp" alt="Lámina: las máscaras del falso amigo" loading="lazy"><figcaption>Las máscaras del falso amigo</figcaption></figure></button>
+      <button class="zoom" data-src="img/grooming-pasos.webp" data-cap="Los cinco pasos con que opera."><figure><img src="img/grooming-pasos.webp" alt="Lámina: así opera, paso a paso" loading="lazy"><figcaption>Así opera, paso a paso</figcaption></figure></button>
+      <button class="zoom" data-src="img/grooming-papas.webp" data-cap="Cinco acciones para mamás y papás."><figure><img src="img/grooming-papas.webp" alt="Lámina: cinco acciones para mamás y papás" loading="lazy"><figcaption>5 acciones para mamás y papás</figcaption></figure></button>
+    </div>
+    <div class="downloads">
+      <a class="dl" href="docs/Act6_Video_Grooming_Evidencia.pdf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 21h16"/></svg>Descargar evidencia (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<!-- AYUDA -->
+<section class="alt" id="ayuda">
+  <div class="wrap">
+    <span class="kicker">Si te pasó algo</span>
+    <h2>¿Dónde denunciar en México?</h2>
+    <p class="intro">No borres mensajes ni capturas: son tu evidencia. No pagues ni negocies con quien te amenaza.</p>
+    <div class="help">
+      <div class="card"><b>088</b><p>Guardia Nacional: reporte de delitos cibernéticos.</p></div>
+      <div class="card"><b>911</b><p>Emergencias, si hay peligro inmediato.</p></div>
+      <div class="card"><b>Fiscalía</b><p>Denuncia formal en la fiscalía de tu estado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCIAS -->
+<section id="referencias">
+  <div class="wrap">
+    <span class="kicker">Fuentes</span>
+    <h2>Referencias (APA 7)</h2>
+    <ul class="refs">
+      <li>Banco de México. (2018, 29 de agosto). <i>Reporte de análisis forenses: Versión pública</i>. https://www.banxico.org.mx/spei/d/%7B4A977A24-0889-3F24-A717-DF9DBBA118C1%7D.pdf</li>
+      <li>Cámara de Diputados del H. Congreso de la Unión. (2024). <i>Código Penal Federal</i>. https://www.diputados.gob.mx/LeyesBiblio/pdf/CPF.pdf</li>
+      <li>Consejo de Europa. (2001). <i>Convenio sobre la Ciberdelincuencia (Convenio de Budapest)</i>. https://rm.coe.int/1680081561</li>
+      <li>Fletcher, R., Tzani, C., &amp; Ioannou, M. (2025). Danger on Discord: How 764 prey on and extort minors. <i>Assessment &amp; Development Matters, 17</i>(2), 59–63. https://doi.org/10.53841/bpsadm.2025.17.2.59</li>
+      <li>IBM Security. (2025). <i>Cost of a data breach report 2025</i>. IBM. https://www.ibm.com/reports/data-breach</li>
+      <li>Instituto Nacional de Estadística y Geografía. (2026, 7 de julio). <i>Módulo sobre Ciberacoso (MOCIBA) 2025</i> [Comunicado de prensa 37/26]. https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/mociba/MOCIBA2025_CP.pdf</li>
+      <li>Ley Federal de Protección de Datos Personales en Posesión de los Particulares [LFPDPPP]. Diario Oficial de la Federación, 20 de marzo de 2025 (México).</li>
+      <li>National Center for Missing &amp; Exploited Children. (2026). <i>CyberTipline data 2025</i>. https://www.missingkids.org/cybertiplinedata</li>
+      <li>Piña Libién, H. R. (2019). Cibercriminalidad y ciberseguridad en México [Lectura del curso].</li>
+      <li>Verizon Business. (2026). <i>2026 data breach investigations report</i>. Verizon. https://www.verizon.com/business/resources/reports/dbir/</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p><b>ElVigilante</b> · Proyecto académico de la materia Delitos Cibernéticos</p>
+      <p>México, octubre de 2026 · Este sitio no recopila datos personales.</p>
+    </div>
+    <img src="img/umad-logo.webp" alt="Logo Universidad Madero (UMAD)" width="600" height="384">
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Imagen ampliada"><button aria-label="Cerrar">×</button><img alt=""><p></p></dialog>
+<script>
+// menú en celular
+const btn=document.querySelector('.menu-btn'), nav=document.getElementById('menu');
+btn.addEventListener('click',()=>{const o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');btn.setAttribute('aria-expanded',false)}));
+// ver imagen en grande
+const lb=document.getElementById('lb');
+document.querySelectorAll('.zoom').forEach(z=>z.addEventListener('click',()=>{
+  lb.querySelector('img').src=z.dataset.src; lb.querySelector('img').alt=z.dataset.cap; lb.querySelector('p').textContent=z.dataset.cap; lb.showModal();
+}));
+lb.querySelector('button').addEventListener('click',()=>lb.close());
+lb.addEventListener('click',e=>{if(e.target===lb)lb.close()});
+</script>
+</body>
+</html>
